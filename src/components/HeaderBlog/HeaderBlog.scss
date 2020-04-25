@@ -1,0 +1,14 @@
+.header-blog {
+    background-color: var(--base-color);
+    color: var(--light-color);
+    min-height: 255px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__title {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 72px;
+        text-transform: uppercase;
+    }
+}

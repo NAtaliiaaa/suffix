@@ -8,14 +8,20 @@
           v-bind="article"
         />
       </ul>
+      <div class="article__btn">
+       <router-link class="article__link" :to="'/blog'">
+            See all
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import ArticleItem from "@/components/article-item/article-item";
+import ArticleItem from "@/components/ArticleItem/ArticleItem.vue";
 
 export default {
+  
   props: ["tag", "ignoreFirst"],
   computed: {
     articlesByTag() {
@@ -33,5 +39,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "article-list.scss";
+@import "./ArticleList.scss";
 </style>

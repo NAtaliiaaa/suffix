@@ -1,0 +1,30 @@
+.acticles {
+    margin: 100px 0;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.article__link {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--button-bg-color);
+    width: 242px;
+    height: 42px;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.article__btn {
+    margin: 50px;
+}

@@ -1,0 +1,18 @@
+.nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    padding: 45px;
+    box-shadow: 2px 2px 10px rgb(216, 216, 216);
+    background-color: var(--light-color);
+    width: 345px;
+    min-height: 196px;
+    &__item {
+        padding: 5px;
+        color: var(--base-color);
+        font-style: normal;
+        font-weight: var(--base-font-style);
+        font-size: 16px;
+    }
+}

@@ -1,36 +1,90 @@
-header {
-  position: relative;
-  z-index: 2;
-  height: 100px;
-  outline: 2px solid red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header {
+    position: relative;
+    z-index: 2;
+    height: 120px;
+    // outline: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.fixed {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        transition: var(--trans-head);
+        background-color: rgba($color-hover, 0.7);
+    }
+}
+
+.header__container {
+    /* background-color: blue; */
+    max-width: 1340px;
+    // padding: 0 51px;
+    margin: 0 auto;
 }
 
 .burger {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  padding: 10px;
-  transform: translateY(-50%);
-
-  &.active {
-    + .nav {
-      display: block;
+    background: none;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    padding: 10px;
+    box-shadow: none;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    &.active {
+        +.nav {
+            // display: block;
+            display: flex;
+            flex-direction: column;
+        }
     }
-  }
 }
 
-.nav {
-  display: none;
-  position: absolute;
-  top: 70px;
-  left: 20px;
-  padding: 20px;
-  box-shadow: 2px 2px 10px rgb(216, 216, 216);
-  background-color: white;
+.burger,
+.burger:active,
+.burger:focus {
+    outline: none;
+}
 
-  &-wrap {
-  }
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+
+.hamRotate180.active {
+    transform: rotate(180deg);
+}
+
+.line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #000;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+}
+
+.ham2 .top {
+    stroke-dasharray: 40 121;
+}
+
+.ham2 .bottom {
+    stroke-dasharray: 40 121;
+}
+
+.ham2.active .top {
+    stroke-dashoffset: -102px;
+}
+
+.ham2.active .bottom {
+    stroke-dashoffset: -102px;
 }

@@ -1,0 +1,78 @@
+.baner {
+    display: flex;
+    color: var(--light-color);
+    &__image {
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__content_box {
+        padding: 120px 80px;
+        // border: 2px solid red;
+    }
+    &__image_box {
+        position: relative;
+        // border: 2px solid red;
+    }
+    &__content_header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 66px;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 42px;
+        text-transform: uppercase;
+        padding-bottom: 29px;
+    }
+    &__intro {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+        padding-bottom: 54px;
+    }
+    &__link {
+        width: 300px;
+        font-weight: 500;
+        min-width: 200px;
+        min-height: 55px;
+        padding: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        background: none;
+        color: var(--light-color);
+        border: 1px solid var(--light-color);
+        cursor: pointer;
+        text-decoration: none;
+    }
+    &__link:hover {
+        color: var(--base-color);
+        background: var(--light-color);
+        border: none;
+        box-shadow: none;
+        transition: 1s;
+    }
+    &__tag {
+        font-size: 16px;
+        text-transform: uppercase;
+        color: var(--light-color);
+    }
+    &__date {
+        font-size: 16px;
+    }
+}
+
+.overlay {
+    width: 100%;
+    background-color: var(--base-color);
+    display: flex;
+}
+
+.item {
+    width: 50%;
+}

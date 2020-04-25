@@ -6,8 +6,12 @@ import Vue from "vue";
  * -------------------------------
  */
 import Header from "@/chunks/header/header";
-Vue.component("v-header", Header);
+// import Button from '@/chunks/button/button.vue';
 
+// import ServiceCard from '@/chunks/service-card/service-card.vue';
+Vue.component("v-header", Header);
+// Vue.component('v-service-card', ServiceCard);
+// Vue.component('my-button', Button);
 /**
  * -------------------------------
  * Mixins
@@ -23,8 +27,8 @@ Vue.mixin(mixin);
  */
 import moment from "moment";
 Vue.filter("formatDate", function(value) {
-  if (value) {
-    // return moment(String(value)).format('MM/DD/YYYY hh:mm');
-    return moment(String(value)).format("MM/DD/YYYY");
-  }
+    if (value) {
+        // return moment(String(value)).format('MM/DD/YYYY hh:mm');
+        return moment(String(value)).format("MM/DD/YYYY");
+    }
 });

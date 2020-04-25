@@ -1,3 +1,59 @@
 @import './settings.scss';
-
 // add global, btn, components, normalize + other
+// @import 'settings/variables.scss';
+// @import 'settings/mixins.scss';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    &.router-link-exact-active {
+        // border: 5px solid red;
+    }
+}
+
+body {
+    font-family: var(--base-font-family);
+    font-size: var(--base-font-style);
+    &.overflow {
+        overflow: hidden;
+    }
+}
+
+.container {
+    outline: 1px solid red;
+    // max-width: 1140px;
+    // margin: 0 auto;
+    max-width: 1180px;
+    // padding: 0 20px;
+    margin: 0 auto;
+}
+
+.preloader {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transition: var(--trans-loader);
+    .loaded & {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.base-date {
+    font-weight: 500;
+    letter-spacing: 7px;
+}
+
+.w1-3 {
+    width: calc(100% / 3 - 20px);
+    margin: 0 10px;
+    // padding: 10px 5px;
+}
