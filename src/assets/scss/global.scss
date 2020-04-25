@@ -23,6 +23,18 @@ body {
 .container {
     max-width: 1180px;
     margin: 0 auto;
+    // @include respond-below(sm) {
+    //     height: 280px;
+    // }
+    @include respond-below(md_plus) {
+        max-width: 1024px;
+    }
+    @include respond-below(md) {
+        max-width: 768px;
+    }
+    @include respond-below(sm) {
+        max-width: 568px;
+    }
 }
 
 .preloader {
@@ -51,5 +63,7 @@ body {
 .w1-3 {
     width: calc(100% / 3 - 20px);
     margin: 0 10px;
-    // padding: 10px 5px;
+    @include respond-below(sm) {
+        width: calc(100% / 1 - 20px);
+    }
 }

@@ -2,6 +2,12 @@
     width: calc(100% / 3 - 20px);
     margin: 0 10px;
     padding: 10px;
+    @include respond-below(md) {
+        width: calc(100% / 2 - 20px);
+    }
+    @include respond-below(sm) {
+        width: calc(100% / 1 - 20px);
+    }
 }
 
 .icon {

@@ -9,12 +9,6 @@
 .img {
     height: 200px;
     width: 100%;
-    @include respond-below(md_plus) {
-        height: 180px;
-    }
-    @include respond-below(md) {
-        height: 170px;
-    }
 }
 
 .article {

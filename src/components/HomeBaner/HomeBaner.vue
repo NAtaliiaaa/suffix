@@ -14,17 +14,26 @@
             <time class="base-date baner__date" :datetime="article.data.date">{{
               article.data.date | formatDate
             }}</time>
-            <router-link class="baner__tag" :to="'/'">
-            {{ $t(`${_getTag(article.data.categs)}`) }}
+            <router-link
+              class="baner__tag"
+              :to="{
+                path: `blog?tag=${_getTag(article.data.categs)}`,
+                query: { tag: _getTag(article.data.categs) }
+              }"
+            >
+              {{ $t(`${_getTag(article.data.categs)}`) }}
             </router-link>
           </div>
           <div class="baner__content">
-            <p class="baner__title">{{maxLengthTitle(article.data.title)  }}</p>
-            <div class="baner__intro cms" v-html="maxLengthIntro(article.data.intro)"></div>
+            <p class="baner__title">{{ maxLengthTitle(article.data.title) }}</p>
+            <div
+              class="baner__intro cms"
+              v-html="maxLengthIntro(article.data.intro)"
+            ></div>
           </div>
           <router-link class="baner__link" :to="'/blog/' + article.data.slug">
-
-      Read moore       </router-link>
+            Read moore
+          </router-link>
         </div>
       </div>
     </section>
@@ -35,7 +44,7 @@
 import { mapState, mapGetters } from "vuex";
 export default {
   computed: {
-    ...mapState('translations', ['trans']),
+    ...mapState("translations", ["trans"]),
     ...mapGetters("blog", {
       getTagById: "getTagById",
       article: "firstArtice"
@@ -56,19 +65,17 @@ export default {
     this.$store.dispatch("blog/getArticles");
   },
   methods: {
-    maxLengthIntro(str){
+    maxLengthIntro(str) {
       var maxLength = 100;
       if (str.length > maxLength) {
         return str.slice(0, maxLength) + "...";
-      }
-      else return str;
+      } else return str;
     },
-     maxLengthTitle(str){
+    maxLengthTitle(str) {
       var maxLength = 50;
       if (str.length > maxLength) {
         return str.slice(0, maxLength) + "...";
-      } 
-      else return str;
+      } else return str;
     }
   }
 };

@@ -2,12 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import store from "@/store";
 import { preloader } from "@/plugins/preloader";
-/**
- * -----------
- * Route views
- * -----------
- */
-// import Home from "@/views/index.vue";
+
 /* eslint-disable */
 import Home from '@/views/home.vue';
 
