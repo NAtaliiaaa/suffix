@@ -8,6 +8,7 @@ import { preloader } from "@/plugins/preloader";
  * -----------
  */
 // import Home from "@/views/index.vue";
+/* eslint-disable */
 import Home from '@/views/home.vue';
 
 import loginRoute from "@/views/login.vue";
