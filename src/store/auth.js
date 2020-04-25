@@ -1,5 +1,5 @@
 import { http } from "@/plugins/http";
-
+/* eslint-disable */
 const mutt = {
     SET_TOKEN: "SET_TOKEN",
     SET_AUTH_ERROR: "SET_AUTH_ERROR"
