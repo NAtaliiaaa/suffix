@@ -1,4 +1,5 @@
 import { /*mapState,*/ mapGetters } from "vuex";
+/* eslint-disable */
 export const mixin = {
     methods: {
         _getTag(categories) {

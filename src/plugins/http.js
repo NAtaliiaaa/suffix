@@ -1,6 +1,6 @@
 import axios from "axios";
 import store from "@/store";
-
+/* eslint-disable */
 var axiosInstance = axios.create({
     baseURL: "https://cloud.squidex.io",
     headers: {
@@ -15,7 +15,7 @@ axiosInstance.interceptors.response.use(
     },
     function(data) {
         if (data.response.status === 401) {
-            console.log("Token is not valid or token is not exist");
+            // console.log("Token is not valid or token is not exist");
             store.dispatch("auth/login");
             document.location.reload();
         }
